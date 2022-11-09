@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #FFEDD5; /*hex: 0-F*/
+  background-color: #ecd02f; /*hex: 0-F*/
   font-family: 'Roboto', sans-serif;
 }
 
@@ -16,6 +16,10 @@ h1, h2, h3, .price {
   font-family: 'Roboto Serif', serif;
   text-transform: uppercase;
   color: #2D2C2A;
+}
+
+h2 {
+  color: #faf4f6;
 }
 
 header {
@@ -36,7 +40,7 @@ header h1 {
 }
 
 header h1 span {
-  color: #995000;
+  color: #ea0003;
 }
 
 header p {
@@ -50,7 +54,7 @@ section {
 }
 
 section h2 {
-  background-color: #FED7AA;
+  background-color: #ea0003;
   padding: 8px 16px;
   text-align: center;
   margin-bottom: 24px;
