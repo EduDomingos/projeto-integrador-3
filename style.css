@@ -2,6 +2,8 @@
   --main-color: #ea0003;
   --primary-backgroung-color: #ecd02f;
   --secondary-backgroung-color: #f7e8ad;
+  --primary-text-color: #2D2C2A;
+  --secondary-text-color: rgba(0, 0, 0, 0.8);
 
 }
 
@@ -19,16 +21,10 @@ ul {
   list-style: none;
 }
 
-h1, h3, .price {
+h1, h2, h3, .price {
   font-family: 'Roboto Serif', serif;
   text-transform: uppercase;
-  color: #2D2C2A;
-}
-
-h2 {
-  font-family: 'Roboto Serif', serif;
-  text-transform: uppercase;
-  color: #faf4f6;
+  color: var(--primary-text-color);
 }
 
 header {
@@ -36,15 +32,9 @@ header {
   text-align: center;
 }
 
-header,
-section {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
 header h1 {
   margin-bottom: 4px;
-  font-size: 28px;
+  font-size: 2rem;
   font-weight: 700;  
   line-height: 33px;
 }
@@ -54,21 +44,28 @@ header h1 span {
 }
 
 header p {
-  color: rgba(0, 0, 0, 0.9);
-  font-size: 14px;
-  line-height: 16px;
+  color: var(--secondary-text-color);
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+header,
+section {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 section {
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 section h2 {
   background-color: var(--main-color);
-  padding: 8px 16px;
+  color: #faf4f6;
+  padding: 0.5rem 1rem;
   text-align: center;
-  margin-bottom: 24px;
-  font-size: 18px;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
 }
 
 ul {
@@ -77,24 +74,31 @@ ul {
 }
 
 ul li {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
+  border-bottom: var(--primary-text-color) dashed;
+  border-width: 1px;
 }
 
 li .details {
   max-width: 400px;
+  padding-bottom: 0.5rem;
 }
 
 li .details h3 {
   color: var(--main-color);
   margin-bottom: 0.1rem;
-  font-size: 1rem;
-  line-height: 19px;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 
 .details p {
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 14px;
-  line-height: 20px;
+  color: var(--secondary-text-color);
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+
+.price {
+  font-size: 1.1rem;
 }

@@ -36,7 +36,7 @@ function createList(data) { //Creating list dynamically
 			</p>
 		</div>
 		<strong class="price">
-			R$${data.price}
+			R$ ${data.price.toFixed(2)}
 		</strong>
 	`
 	rightCategory.appendChild(li)
