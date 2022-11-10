@@ -81,6 +81,10 @@ ul li {
   border-width: 1px;
 }
 
+ul :last-child {
+  border: none;
+}
+
 li .details {
   max-width: 400px;
   padding-bottom: 0.5rem;
