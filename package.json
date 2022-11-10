@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "node": "^19.0.1"
+  }
+}
