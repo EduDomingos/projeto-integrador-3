@@ -12,11 +12,14 @@ async function getData(url) { //GET Request to endpoint, return response json
 }
 
 function createList(data) { //Creating list dynamically
-	let rightCategory = 0
 
 	switch (data.CategoryId) {
 		case 2:
 			rightCategory = document.querySelector("#dois")
+			break;
+	
+		case 5:
+			rightCategory = document.querySelector("#cinco")
 			break;
 	
 		default:
