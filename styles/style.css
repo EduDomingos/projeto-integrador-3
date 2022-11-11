@@ -4,7 +4,8 @@
   --secondary-backgroung-color: #f7e8ad;
   --primary-text-color: #2D2C2A;
   --main-color-hover: #aa0003;
-  --secondary-text-color: rgba(0, 0, 0, 0.8);
+  --tertiary-text-color: #faf4f6;
+  --secondary-text-color: rgba(0, 0, 0, 0.95);
 
 }
 
@@ -23,39 +24,46 @@ ul {
   list-style: none;
 }
 
-h1, h2, h3, .price {
+#navbar, h1, h2, h3, .price {
   font-family: 'Roboto Serif', serif;
   text-transform: uppercase;
   color: var(--primary-text-color);
 }
 
-header {
-  padding: 2rem 0;
+header #logo {
+  padding: 1rem 0 1.5rem 0;
   text-align: center;
 }
 
 #inner-header {
-  display: flex;
+  /* display: flex; */
+  text-align: center;
+  margin: 1.2rem 0;
   justify-content: space-between;
   align-items: center;
 }
 
 #navbar {
-  display: flex;
-  gap: 2rem;
+  /* display: flex; */
+  align-items: center;
   text-transform: uppercase;
-  margin-right: 2rem;
 }
 
 #navbar a {
-  color: var(--primary-text-color);
-  font-weight: bold;
-  padding: 1.5rem;
+  color: var(--main-color);
+  font-weight: 400;
+  padding: 1rem 0.4rem;
+  transition: 400ms;
+}
+
+#navbar a.contato {
+  color: var(--tertiary-text-color);
+  background-color: var(--main-color);
 }
 
 header h1 {
   margin-bottom: 0.25rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;  
   line-height: 2rem;
 }
@@ -67,7 +75,7 @@ header h1 span {
 
 header p {
   color: var(--secondary-text-color);
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1rem;
 }
 
@@ -83,7 +91,7 @@ section {
 
 section h2 {
   background-color: var(--main-color);
-  color: #faf4f6;
+  color: var(--tertiary-text-color);
   padding: 0.5rem 1rem;
   text-align: center;
   margin-bottom: 1.5rem;
@@ -137,13 +145,20 @@ li .details h3 {
   font-size: 1.1rem;
 }
 
+#navbar a.contato:hover,
 section h2:hover {
+  color: #FFFFFF;
   background-color: var(--main-color-hover);
 }
 
 li .details h3:hover,
-header h1 span:hover {
+header h1 span:hover,
+#navbar a:hover {
   color: var(--main-color-hover);
+}
+
+#navbar a:hover {
+  background-color: #c9b53e;
 }
 
 /* Mobile Navbar */
@@ -156,7 +171,7 @@ header h1 span:hover {
 #close-menu {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
 }
 
 #mobile-navbar {
@@ -165,11 +180,11 @@ header h1 span:hover {
   left: 100%;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: var(--secondary-text-color);
   display: flex;
   flex-direction: column;
   padding: 4rem 2rem;
-  transition: 0.4s;
+  transition: 400ms;
   z-index: 3;
 }
 
@@ -178,7 +193,7 @@ header h1 span:hover {
 }
 
 #mobile-navbar a {
-  color: var(--primary-text-color);
+  color: var(--tertiary-text-color);
   font-size: 2rem;
   text-align: center;
   margin-bottom: 1rem;
@@ -187,11 +202,7 @@ header h1 span:hover {
 }
 
 /* Responsividade */
-@media (max-width: 520px) {
-
-  body {
-    overflow-x: hidden;
-  }
+@media (max-width: 695px) {
 
   ul li .details {
     max-width: 220px;

@@ -10,6 +10,8 @@ const mobileLinks = document.querySelectorAll("#mobile-navbar a");
 const sectionLinks = document.querySelectorAll("section a");
 const allLinks = [...desktopLinks, ...mobileLinks, ...sectionLinks];
 
+main()
+
 // Grupo de funções para preencher listas
 async function getData(url) { //GET Request to endpoint, return response json
 	const response = await fetch(url);
@@ -78,10 +80,7 @@ async function main() { //Main function where API response will be used to fill 
   });
 }
 
-main()
-
-// Navibar
-
+// Scroll effect
 function smoothScroll(e) {
   e.preventDefault();
 
@@ -100,12 +99,13 @@ function smoothScroll(e) {
   }, 500)
 }
 
-[menuBtn, closeMenuBtn].forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    menu.classList.toggle("menu-active");
-  });
+allLinks.forEach((link) => {
+	link.addEventListener("click", smoothScroll);
 });
 
-allLinks.forEach((link) => {
-  link.addEventListener("click", smoothScroll);
+// Mobile navbar
+[menuBtn, closeMenuBtn].forEach((btn) => {
+  btn.addEventListener("click", function () {
+			menu.classList.toggle("menu-active");
+		});
 });
