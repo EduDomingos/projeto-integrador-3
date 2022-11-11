@@ -1,5 +1,16 @@
 const requestUrl = "https://personal-27rwjmv9.outsystemscloud.com/cardapio/rest/lanches/list"
 
+// Seleção de elementos
+const menuBtn = document.querySelector("#menu");
+const closeMenuBtn = document.querySelector("#close-menu");
+const menu = document.querySelector("#mobile-navbar");
+
+const desktopLinks = document.querySelectorAll("#navbar a");
+const mobileLinks = document.querySelectorAll("#mobile-navbar a");
+const sectionLinks = document.querySelectorAll("section a");
+const allLinks = [...desktopLinks, ...mobileLinks, ...sectionLinks];
+
+// Grupo de funções para preencher listas
 async function getData(url) { //GET Request to endpoint, return response json
 	const response = await fetch(url);
 	// Handle errors
@@ -68,3 +79,33 @@ async function main() { //Main function where API response will be used to fill 
 }
 
 main()
+
+// Navibar
+
+function smoothScroll(e) {
+  e.preventDefault();
+
+  const href = this.getAttribute("href");
+  const offsetTop = document.querySelector(href).offsetTop;
+
+  scroll({
+    top: offsetTop,
+    behavior: "smooth",
+  });
+
+  setTimeout(() => {
+    if(menu.classList.contains("menu-active")) {
+      menu.classList.remove("menu-active")
+    }
+  }, 500)
+}
+
+[menuBtn, closeMenuBtn].forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    menu.classList.toggle("menu-active");
+  });
+});
+
+allLinks.forEach((link) => {
+  link.addEventListener("click", smoothScroll);
+});
