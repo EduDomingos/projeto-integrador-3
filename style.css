@@ -3,6 +3,7 @@
   --primary-backgroung-color: #ecd02f;
   --secondary-backgroung-color: #f7e8ad;
   --primary-text-color: #2D2C2A;
+  --main-color-hover: #aa0003;
   --secondary-text-color: rgba(0, 0, 0, 0.8);
 
 }
@@ -41,6 +42,7 @@ header h1 {
 
 header h1 span {
   color: var(--main-color);
+  transition: 400ms;
 }
 
 header p {
@@ -65,12 +67,14 @@ section h2 {
   padding: 0.5rem 1rem;
   text-align: center;
   margin-bottom: 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  transition: 400ms;
 }
 
 ul {
   background-color: var(--secondary-backgroung-color);
   padding: 1rem;
+  margin: 0 0.5rem;
 }
 
 ul li {
@@ -95,6 +99,7 @@ li .details h3 {
   margin-bottom: 0.1rem;
   font-size: 1.2rem;
   line-height: 1.5rem;
+  transition: 400ms;
 }
 
 .details p {
@@ -105,4 +110,23 @@ li .details h3 {
 
 .price {
   font-size: 1.1rem;
+}
+
+section h2:hover {
+  background-color: var(--main-color-hover);
+}
+
+li .details h3:hover,
+header h1 span:hover {
+  color: var(--main-color-hover);
+}
+
+/* Responsividade */
+@media (max-width: 520px) {
+
+
+
+
+
+  
 }

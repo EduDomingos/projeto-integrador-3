@@ -18,8 +18,20 @@ function createList(data) { //Creating list dynamically
 			rightCategory = document.querySelector("#dois")
 			break;
 	
+		case 3:
+			rightCategory = document.querySelector("#tres")
+			break;
+	
+		case 4:
+			rightCategory = document.querySelector("#quatro")
+			break;
+	
 		case 5:
 			rightCategory = document.querySelector("#cinco")
+			break;
+	
+		case 6:
+			rightCategory = document.querySelector("#seis")
 			break;
 	
 		default:
