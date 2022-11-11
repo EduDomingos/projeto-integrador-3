@@ -14,6 +14,10 @@ async function getData(url) { //GET Request to endpoint, return response json
 function createList(data) { //Creating list dynamically
 
 	switch (data.CategoryId) {
+		case 1:
+			rightCategory = document.querySelector("#um")
+			break;
+	
 		case 2:
 			rightCategory = document.querySelector("#dois")
 			break;

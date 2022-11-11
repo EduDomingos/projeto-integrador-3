@@ -71,6 +71,10 @@ section h2 {
   transition: 400ms;
 }
 
+section h2 span {
+  font-size: 0.8rem;
+}
+
 ul {
   background-color: var(--secondary-backgroung-color);
   padding: 1rem;
