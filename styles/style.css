@@ -65,7 +65,7 @@ header .logo {
   transition: 400ms;
 }
 
-#navbar a.contato {
+#navbar a.desktop-contato {
   color: var(--tertiary-text-color);
   background-color: var(--main-color);
 }
@@ -210,6 +210,14 @@ header h1 span:hover,
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--main-color);
   transition: 400ms;
+}
+
+#mobile-navbar a:hover {
+  color: var(--main-color);
+}
+
+#mobile-navbar a.mobile-contato:hover {
+  color: var(--tertiary-text-color);
 }
 
 #mobile-navbar a:last-child {
