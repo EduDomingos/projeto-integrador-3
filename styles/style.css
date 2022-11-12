@@ -40,7 +40,7 @@ i {
 }
 
 header .logo {
-  padding: 0rem 0 1.0rem 0;
+  padding: 0rem 0 1rem 0;
   text-align: center;
 }
 
@@ -75,6 +75,7 @@ header h1 {
   font-size: 2.5rem;
   font-weight: 700;  
   line-height: 2rem;
+  padding-top: 1rem;
 }
 
 header h1 span {
@@ -86,6 +87,7 @@ header p {
   color: var(--secondary-text-color);
   font-size: 1.2rem;
   line-height: 1rem;
+  padding-bottom: 1rem;
 }
 
 header,
@@ -181,7 +183,7 @@ header h1 span:hover,
 #close-menu {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
 }
 
 #mobile-navbar {
