@@ -96,7 +96,7 @@ function smoothScroll(e) {
     if(menu.classList.contains("menu-active")) {
       menu.classList.remove("menu-active")
     }
-  }, 500)
+  }, 300)
 }
 
 allLinks.forEach((link) => {

@@ -30,6 +30,7 @@ i {
   color: var(--tertiary-text-color);
   font-size: 2.5rem;
   padding: 2rem;
+  transition: 400ms;
 }
 
 #navbar, h1, h2, h3, .price {
@@ -38,12 +39,12 @@ i {
   color: var(--primary-text-color);
 }
 
-header #logo {
-  padding: 1rem 0 1.5rem 0;
+header .logo {
+  padding: 0rem 0 1.0rem 0;
   text-align: center;
 }
 
-#inner-header {
+.inner-header {
   /* display: flex; */
   text-align: center;
   margin: 1.2rem 0;
@@ -70,7 +71,7 @@ header #logo {
 }
 
 header h1 {
-  margin-bottom: 0.25rem;
+  /* margin-bottom: 0.25rem; */
   font-size: 2.5rem;
   font-weight: 700;  
   line-height: 2rem;
@@ -154,7 +155,8 @@ li .details h3 {
 }
 
 #navbar a.contato:hover,
-section h2:hover {
+section h2:hover,
+i:hover {
   color: #FFFFFF;
   background-color: var(--main-color-hover);
 }
@@ -207,20 +209,49 @@ header h1 span:hover,
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--main-color);
+  transition: 400ms;
+}
+
+#mobile-navbar a:last-child {
+  border-bottom: none;
+  color: var(--main-color);
 }
 
 /* Responsividade */
-@media (max-width: 695px) {
+@media (max-width: 600px) {
+  #navbar {
+    display: none;
+  }
 
   ul li .details {
     max-width: 220px;
   }
 
-  #navbar {
-    display: none;
+  .inner-header {
+    margin: 0 0;
+  }  
+
+  header #banner {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
   }
 
+  header #banner .logo h1{
+    text-align: left;
+    padding: 1.5rem 0.5rem 0 1.5rem;
+    align-content: center;
+    
+  }
+  
   #menu, #close-menu {
     display: block;
+  }
+
+}
+
+@media (max-width: 448px) {
+  header #banner .logo h1{
+    padding: 0.5rem 0.5rem 0 2rem;
   }
 }
