@@ -90,6 +90,7 @@ header p {
   padding-bottom: 1rem;
 }
 
+footer,
 header,
 section {
   max-width: 800px;
@@ -227,10 +228,32 @@ header h1 span:hover,
   color: var(--main-color);
 }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+footer i {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  max-height: 70px;
+  max-width: 70px;
+}
+
+footer i span{
+  font-size: 1rem;
+  font-style: normal;
+}
+
 /* Responsividade */
 @media (max-width: 600px) {
   #navbar {
-    display: none;
+    display: 0;
   }
 
   ul li .details {
