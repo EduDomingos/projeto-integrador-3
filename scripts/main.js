@@ -10,7 +10,6 @@ const mobileLinks = document.querySelectorAll("#mobile-navbar a");
 const sectionLinks = document.querySelectorAll("section a");
 const allLinks = [...desktopLinks, ...mobileLinks, ...sectionLinks];
 
-let screenWidth = window.innerWidth
 const endereco = document.querySelector("#endereco")
 const whatsapp = document.querySelector("#whatsapp")
 const telefone = document.querySelector("#telefone")
@@ -86,7 +85,7 @@ async function main() { //Main function where API response will be used to fill 
     createList(element)    
   });
 
-  justIcons(screenWidth)
+  justIcons()
 }
 
 // Scroll effect
@@ -122,7 +121,7 @@ allLinks.forEach((link) => {
 // Mobile footer icons
 function justIcons() {
 	const screenWidth = document.documentElement.clientWidth
-	if (screenWidth <= 405) {
+	if (screenWidth <= 410) {
 		endereco.innerHTML = 
 			`<a href="https://goo.gl/maps/GXtqDMpB4GN7eUez6" target="_blank"><i class="bi bi-geo-alt"></i></a>`
 		whatsapp.innerHTML = 

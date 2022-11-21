@@ -315,7 +315,7 @@ footer i span{
 
 }
 
-@media (max-width: 405px) {
+@media (max-width: 410px) {
   footer {
     max-height: 8rem;
     margin-top: -2rem;
@@ -329,7 +329,7 @@ footer i span{
   footer i {
     font-size: 2rem;
     padding: 1.5rem;
-    margin: 0 0.5rem;
+    margin: 0 1rem;
   }
   
 }
