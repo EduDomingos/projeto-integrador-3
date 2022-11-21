@@ -10,6 +10,13 @@ const mobileLinks = document.querySelectorAll("#mobile-navbar a");
 const sectionLinks = document.querySelectorAll("section a");
 const allLinks = [...desktopLinks, ...mobileLinks, ...sectionLinks];
 
+let screenWidth = window.innerWidth
+const endereco = document.querySelector("#endereco")
+const whatsapp = document.querySelector("#whatsapp")
+const telefone = document.querySelector("#telefone")
+
+window.addEventListener("resize", justIcons)
+
 main()
 
 // Grupo de funções para preencher listas
@@ -78,6 +85,8 @@ async function main() { //Main function where API response will be used to fill 
 	data.forEach(element => {
     createList(element)    
   });
+
+  justIcons(screenWidth)
 }
 
 // Scroll effect
@@ -109,3 +118,30 @@ allLinks.forEach((link) => {
 			menu.classList.toggle("menu-active");
 		});
 });
+
+// Mobile footer icons
+function justIcons() {
+	const screenWidth = document.documentElement.clientWidth
+	if (screenWidth <= 405) {
+		endereco.innerHTML = 
+			`<a href="https://goo.gl/maps/GXtqDMpB4GN7eUez6" target="_blank"><i class="bi bi-geo-alt"></i></a>`
+		whatsapp.innerHTML = 
+			`<a href="https://api.whatsapp.com/send?phone=5514991554424" target="_blank"><i class="bi bi-whatsapp"></i></a>`
+		telefone.innerHTML = 
+			`<a href="tel:31320064"><i class="bi bi-telephone-fill"></i></a>`
+	}
+	else {
+		endereco.innerHTML = 
+			`<a href="https://goo.gl/maps/GXtqDMpB4GN7eUez6" target="_blank">
+			<i class="bi bi-geo-alt"><span>Rua Fernando Villa 43, Jardim Planalto. Brotas - SP</span></i>
+			</a>`
+		whatsapp.innerHTML = 
+			`<a href="https://api.whatsapp.com/send?phone=5514991554424" target="_blank">
+			<i class="bi bi-whatsapp"><span>(14) 9 9155-4424</span></i>
+			</a>`
+		telefone.innerHTML = 
+			`<a href="tel:31320064">
+			<i class="bi bi-telephone-fill"><span>(14) 3132-0064</span></i>
+			</a>`
+	}
+}

@@ -23,6 +23,7 @@ body {
 
 ul {
   list-style: none;
+  border-radius: 0.2rem;
 }
 
 i {
@@ -155,6 +156,7 @@ header h1 span:hover,
 
 #navbar a:hover {
   background-color: #c9b53e;
+  border-radius: 0.2rem;
 }
 
 /* Mobile Navbar */
@@ -162,6 +164,7 @@ header h1 span:hover,
   font-size: 2rem;
   padding: 1rem;
   display: none;
+  border-radius: 0.2rem;
 }
 
 #close-menu {
@@ -268,7 +271,10 @@ footer i span{
   footer #contatos {
     align-items: center;
     margin: 1rem auto;
+  }
 
+  footer i {
+    border-radius: 0.2rem;
   }
 
 }
@@ -307,4 +313,23 @@ footer i span{
     display: block;
   }
 
+}
+
+@media (max-width: 405px) {
+  footer {
+    max-height: 8rem;
+    margin-top: -2rem;
+  }
+
+  footer #contatos {
+    flex-direction: row;
+    max-height: 7rem;
+  }
+
+  footer i {
+    font-size: 2rem;
+    padding: 1.5rem;
+    margin: 0 0.5rem;
+  }
+  
 }
