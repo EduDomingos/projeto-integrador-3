@@ -39,13 +39,17 @@ i {
   color: var(--primary-text-color);
 }
 
+header img {
+  max-width: 300px;
+  max-height: 300px;
+}
+
 header .logo {
   padding: 0rem 0 1rem 0;
   text-align: center;
 }
 
 .inner-header {
-  /* display: flex; */
   text-align: center;
   margin: 1.2rem 0;
   justify-content: space-between;
@@ -53,7 +57,6 @@ header .logo {
 }
 
 #navbar {
-  /* display: flex; */
   align-items: center;
   text-transform: uppercase;
 }
@@ -68,26 +71,6 @@ header .logo {
 #navbar a.desktop-contato {
   color: var(--tertiary-text-color);
   background-color: var(--main-color);
-}
-
-header h1 {
-  /* margin-bottom: 0.25rem; */
-  font-size: 2.5rem;
-  font-weight: 700;  
-  line-height: 2rem;
-  padding-top: 1rem;
-}
-
-header h1 span {
-  color: var(--main-color);
-  transition: 400ms;
-}
-
-header p {
-  color: var(--secondary-text-color);
-  font-size: 1.2rem;
-  line-height: 1rem;
-  padding-bottom: 1rem;
 }
 
 footer,
@@ -228,15 +211,30 @@ header h1 span:hover,
   color: var(--main-color);
 }
 
+/* Footer - Contatos */
+
 footer {
   display: flex;
   justify-content: space-between;
 }
 
 footer img {
-  max-width: 200px;
-  max-height: 200px;
+  margin-left: 3rem;
 }
+
+footer img {
+  max-width: 250px;
+  max-height: 250px;
+}
+
+footer #contatos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 1rem 0 1rem auto;
+}
+
 
 footer i {
   font-size: 1.5rem;
@@ -248,12 +246,36 @@ footer i {
 footer i span{
   font-size: 1rem;
   font-style: normal;
+  margin-left: 0.3rem;
 }
 
 /* Responsividade */
+@media (max-width: 710px) {
+
+  header .logo {
+    margin-top: 0.5rem;
+  }
+
+  footer #imagem {
+    display: none;
+  }
+
+  footer {
+    min-height: 12rem;
+    margin-bottom: 1rem;
+  }
+
+  footer #contatos {
+    align-items: center;
+    margin: 1rem auto;
+
+  }
+
+}
+
 @media (max-width: 600px) {
   #navbar {
-    display: 0;
+    display: none;
   }
 
   ul li .details {
@@ -266,25 +288,23 @@ footer i span{
 
   header #banner {
     display: flex;
-    /* align-items: center; */
     justify-content: space-between;
   }
 
-  header #banner .logo h1{
-    text-align: left;
-    padding: 1.5rem 0.5rem 0 1.5rem;
-    align-content: center;
-    
+  header .logo {
+    width: 100%;
   }
   
+  header .logo img {
+    padding-left: 4rem;
+  }
+
+  headre .menu-icon {
+    z-index: 2;
+  }
+    
   #menu, #close-menu {
     display: block;
   }
 
-}
-
-@media (max-width: 448px) {
-  header #banner .logo h1{
-    padding: 0.5rem 0.5rem 0 2rem;
-  }
 }
