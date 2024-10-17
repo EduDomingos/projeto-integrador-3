@@ -127,7 +127,7 @@ function justIcons() {
 		whatsapp.innerHTML = 
 			`<a href="https://api.whatsapp.com/send?phone=5514991554424" target="_blank"><i class="bi bi-whatsapp"></i></a>`
 		telefone.innerHTML = 
-			`<a href="tel:31320064"><i class="bi bi-telephone-fill"></i></a>`
+			`<a href="tel:25550136"><i class="bi bi-telephone-fill"></i></a>`
 	}
 	else {
 		endereco.innerHTML = 
@@ -139,8 +139,8 @@ function justIcons() {
 			<i class="bi bi-whatsapp"><span>(14) 9 9155-4424</span></i>
 			</a>`
 		telefone.innerHTML = 
-			`<a href="tel:31320064">
-			<i class="bi bi-telephone-fill"><span>(14) 3132-0064</span></i>
+			`<a href="tel:25550136">
+			<i class="bi bi-telephone-fill"><span>(14) 2555-0136</span></i>
 			</a>`
 	}
 }
