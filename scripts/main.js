@@ -140,7 +140,7 @@ function justIcons() {
 			</a>`
 		telefone.innerHTML = 
 			`<a href="tel:25550136">
-			<i class="bi bi-telephone-fill"><span>(14) 2555-0136</span></i>
+			<i class="bi bi-whatsapp"><span>(14) 2555-0136</span></i>
 			</a>`
 	}
 }
