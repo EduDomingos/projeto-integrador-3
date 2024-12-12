@@ -139,7 +139,7 @@ function justIcons() {
 			<i class="bi bi-whatsapp"><span>(14) 9 9155-4424</span></i>
 			</a>`
 		telefone.innerHTML = 
-			`<a href="tel:25550136">
+			`<a href="https://api.whatsapp.com/send?phone=551425550136" target="_black">
 			<i class="bi bi-whatsapp"><span>(14) 2555-0136</span></i>
 			</a>`
 	}
