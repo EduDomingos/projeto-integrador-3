@@ -125,9 +125,9 @@ function justIcons() {
 		endereco.innerHTML = 
 			`<a href="https://goo.gl/maps/GXtqDMpB4GN7eUez6" target="_blank"><i class="bi bi-geo-alt"></i></a>`
 		whatsapp.innerHTML = 
-			`<a href="https://api.whatsapp.com/send?phone=5514991554424" target="_blank"><i class="bi bi-whatsapp"></i></a>`
+			`<a href="tel:991554424" target="_blank"><i class="bi bi-telephone-fill"></i></a>`
 		telefone.innerHTML = 
-			`<a href="tel:25550136"><i class="bi bi-telephone-fill"></i></a>`
+			`<a href="https://api.whatsapp.com/send?phone=551425550136" target="_black"><i class="bi bi-whatsapp"></i></a>`
 	}
 	else {
 		endereco.innerHTML = 
@@ -135,8 +135,8 @@ function justIcons() {
 			<i class="bi bi-geo-alt"><span>Rua Fernando Villa 43, Jardim Planalto. Brotas - SP</span></i>
 			</a>`
 		whatsapp.innerHTML = 
-			`<a href="https://api.whatsapp.com/send?phone=5514991554424" target="_blank">
-			<i class="bi bi-whatsapp"><span>(14) 9 9155-4424</span></i>
+			`<a href="tel:991554424" target="_blank">
+			<i class="bi bi-telephone-fill"><span>(14) 9 9155-4424</span></i>
 			</a>`
 		telefone.innerHTML = 
 			`<a href="https://api.whatsapp.com/send?phone=551425550136" target="_black">
