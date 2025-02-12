@@ -57,7 +57,11 @@ function createList(data) { //Creating list dynamically
 			rightCategory = document.querySelector("#seis")
 			break;
 	
-		default:
+		case 7:
+			rightCategory = document.querySelector("#sete")
+			break;
+		
+			default:
 			break;
 	}
 
